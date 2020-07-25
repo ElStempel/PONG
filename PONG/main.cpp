@@ -90,7 +90,7 @@ int main()
             }
             
         }
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
         {
             // P1 w górê
             if (bat1.getPosition().top < 0) {
@@ -113,7 +113,7 @@ int main()
                 }
             }
         }
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::I))
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::I))
         {
             if (botmode == false) {
                 // P2 w górê
