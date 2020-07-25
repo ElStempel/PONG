@@ -49,9 +49,34 @@ int main()
         sf::Event event;
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed) {
                 // zamykanie okna
                 window.close();
+            }
+
+            if (event.type == sf::Event::KeyPressed) {
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                {
+                    // escape zamyka
+                    window.close();
+                }
+
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+                {
+                    if (botmode == true) {
+                        botmode = false;
+                    }
+                    else {
+                        botmode = true;
+                    }
+                    if (botmode == false) {
+                        trybBota = "OFF";
+                    }
+                    else {
+                        trybBota = "ON";
+                    }
+                }
+            }
         }
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
@@ -100,27 +125,7 @@ int main()
                 }
             }
         }
-        else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-        {
-            // escape zamyka
-            window.close();
-        }
-
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
-        {
-            if (botmode == true) {
-                botmode = false;
-            }
-            else {
-                botmode = true;
-            }
-            if (botmode == false) {
-                trybBota = "OFF";
-            }
-            else {
-                trybBota = "ON";
-            }
-        }
+        
 
         /*
         Aktualizacja ramki obrazu
