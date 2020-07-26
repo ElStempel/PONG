@@ -24,6 +24,8 @@ public:
 
     void hitSides(int i);
 
+    void reset();
+
     void reboundBat();
 
     void hitBottomOrTop();

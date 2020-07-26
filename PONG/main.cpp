@@ -76,6 +76,15 @@ int main()
                         trybBota = "ON";
                     }
                 }
+
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+                {
+                    P1score = 0;
+                    P2score = 0;
+                    ball.reset();
+                    bat1.reset();
+                    bat2.reset();
+                }
             }
         }
 
@@ -131,6 +140,7 @@ int main()
         Aktualizacja ramki obrazu
         */
 
+        //obs³uga AI
         if (botmode == true) {
             if (ball.getPosition().left > 512) {
                 if (ball.getPosition().top - 35 > bat2.getPosition().top) {

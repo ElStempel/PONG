@@ -39,6 +39,14 @@ void Ball::hitSides(int i)
     position.y = 393;
 }
 
+void Ball::reset() {
+    position.x = 512;
+    position.y = 393;
+
+    xVelocity = .214831f;
+    yVelocity = -.153716f;
+}
+
 void Ball::reboundBat()
 {
     xVelocity = -xVelocity;

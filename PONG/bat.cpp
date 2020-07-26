@@ -20,6 +20,10 @@ sf::RectangleShape Bat::getShape()
     return batShape;
 }
 
+void Bat::reset() {
+    position.y = 384;
+}
+
 void Bat::moveDown()
 {
     position.y += batSpeed;
